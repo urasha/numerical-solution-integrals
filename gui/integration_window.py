@@ -17,10 +17,7 @@ class IntegrationWindow(QtWidgets.QMainWindow):
     def setup_ui(self):
         widget = QtWidgets.QWidget()
 
-        # Основной вертикальный лейаут
         main_layout = QtWidgets.QVBoxLayout()
-
-        # Лейаут формы
         form_layout = QtWidgets.QFormLayout()
 
         self.func_combo = QtWidgets.QComboBox()
