@@ -24,7 +24,5 @@ This repository contains a PyQt-based application for computing numerical integr
 
 - Run the program:
   ```
-  
   python main.py
-  
   ```
