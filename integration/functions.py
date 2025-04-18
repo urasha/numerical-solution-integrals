@@ -1,36 +1,27 @@
-import math
+def f1(x):
+    return -x ** 3 - x ** 2 - 2 * x + 1
 
 
-def f_x2(x):
-    return x ** 2
+def f2(x):
+    return -3 * x ** 3 - 5 * x ** 2 + 4 * x - 2
 
 
-def f_sin(x):
-    return math.sin(x)
+def f3(x):
+    return -2 * x ** 3 - 4 * x ** 2 + 8 * x - 4
 
 
-def f_inv(x):
-    if x == 0:
-        raise ValueError("Discontinuity at x = 0")
-    return 1 / x
+def f4(x):
+    return 3 * x ** 3 + 5 * x ** 2 + 3 * x - 6
 
 
-def f_ln(x):
-    if x <= 0:
-        raise ValueError("ln(x) undefined for x <= 0")
-    return math.log(x)
-
-
-def f_inv_sqrt(x):
-    if x <= 0:
-        raise ValueError("1/sqrt(x) undefined for x <= 0")
-    return 1 / math.sqrt(x)
+def f5(x):
+    return 4 * x ** 3 - 5 * x ** 2 + 6 * x - 7
 
 
 FUNCTIONS = {
-    "x^2": f_x2,
-    "sin(x)": f_sin,
-    "1/x": f_inv,
-    "ln(x)": f_ln,
-    "1/sqrt(x)": f_inv_sqrt
+    "-x³ - x² - 2x + 1": f1,
+    "-3x³ - 5x² + 4x - 2": f2,
+    "-2x³ - 4x² + 8x - 4": f3,
+    "3x³ + 5x² + 3x - 6": f4,
+    "4x³ - 5x² + 6x - 7": f5
 }
