@@ -19,9 +19,7 @@ This repository contains a PyQt-based application for computing numerical integr
   
 - Install dependencies:
   ```
-  
   pip install -r requirements.txt
-  
   ```
 
 - Run the program:
