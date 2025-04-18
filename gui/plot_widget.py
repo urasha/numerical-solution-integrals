@@ -17,12 +17,22 @@ class PlotCanvas(QWidget):
         try:
             y = func(x)
         except Exception:
-            y = np.vectorize(func)(x)  # For functions not supporting array input
+            y = np.vectorize(func)(x)
 
         self.ax.clear()
-        self.ax.plot(x, y, label='f(x)')
-        self.ax.axvline(x=a, color='red', linestyle='--', label='a')
-        self.ax.axvline(x=b, color='green', linestyle='--', label='b')
-        self.ax.legend()
-        self.ax.set_title('График функции с пределами интегрирования')
+        self.ax.set_facecolor('#f7f7f7')
+        self.ax.spines['top'].set_visible(False)
+        self.ax.spines['right'].set_visible(False)
+
+        self.ax.plot(x, y, label='f(x)', color='#3366cc', linewidth=2)
+        self.ax.axvline(x=a, color='#e53935', linestyle='--', linewidth=1.5, label='a')
+        self.ax.axvline(x=b, color='#43a047', linestyle='--', linewidth=1.5, label='b')
+
+        self.ax.grid(True, linestyle='--', linewidth=0.5, alpha=0.7)
+        self.ax.legend(frameon=False, fontsize=10)
+
+        self.ax.set_title('График функции с пределами интегрирования', fontsize=12, fontweight='bold')
+        self.ax.set_xlabel('x')
+        self.ax.set_ylabel('f(x)')
+
         self.canvas.draw()

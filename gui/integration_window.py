@@ -9,8 +9,9 @@ from gui.plot_widget import PlotCanvas
 class IntegrationWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Численное интегрирование")
-        self.setGeometry(100, 100, 500, 400)
+        self.setWindowTitle("Численное интегрирование функций")
+        self.resize(700, 700)
+        self.setMinimumSize(600, 500)
         self.setup_ui()
 
     def setup_ui(self):
