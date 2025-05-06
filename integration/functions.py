@@ -14,8 +14,10 @@ def f4(x):
     return 3 * x ** 3 + 5 * x ** 2 + 3 * x - 6
 
 
-def f5(x):
-    return 4 * x ** 3 - 5 * x ** 2 + 6 * x - 7
+def f_inv(x):
+    if x == 0:
+        raise ValueError("Разрыв в точке x = 0")
+    return 1 / x
 
 
 FUNCTIONS = {
@@ -23,5 +25,5 @@ FUNCTIONS = {
     "-3x³ - 5x² + 4x - 2": f2,
     "-2x³ - 4x² + 8x - 4": f3,
     "3x³ + 5x² + 3x - 6": f4,
-    "4x³ - 5x² + 6x - 7": f5
+    "1 / x": f_inv
 }
