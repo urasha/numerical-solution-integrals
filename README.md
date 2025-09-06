@@ -13,8 +13,8 @@ This repository contains a PyQt-based application for computing numerical integr
 ### 🚀 Installation and Running
 - Clone the repository:
   ```bash
-  git clone https://github.com/urasha/Numerical_Solution_Integrals.git
-  cd Numerical_Solution_Integrals
+  git clone https://github.com/urasha/numerical-solution-integrals.git
+  cd numerical-solution-integrals
   ```
   
 - Install dependencies:
